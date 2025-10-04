@@ -7,19 +7,25 @@
     <groupId>com.example</groupId>
     <artifactId>user-service</artifactId>
     <version>1.0.0</version>
-    <packaging>jar</packaging>
 
     <properties>
         <java.version>17</java.version>
         <spring.boot.version>3.1.1</spring.boot.version>
     </properties>
-
+    <packaging>war</packaging>
     <dependencies>
         <!-- Spring Boot Starter Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring.boot.version}</version>
+        </dependency>
+
+        <!-- Let WebLogic provide the container -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Logback Classic -->
